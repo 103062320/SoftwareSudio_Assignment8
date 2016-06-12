@@ -1,0 +1,15 @@
+Client 端
+利用之前lab做過的計算機，加上socket，需要做修改的地方
+只需要在一開始多增加一個Acticity，讓使用這輸入IPadress，
+在輸入完後跳到下一個Activity同時做連線。
+
+Server端
+利用助教給的code，即可完成最基本的連線，只需要再多增加一個
+innerclass connectThread，讓Server能夠隨時獲得client傳過來的訊息。
+
+本次遇到的問題
+因為我一開始沒發現在計算基部分也有給code，所以我直接用之前的
+lab的code自己寫client的部分，在這邊我遇到一個問題，
+android.os.NetworkOnMainThreadException，上網查了一下，
+才知道在android建立連線時必須利用執行緒，也就是Thread來建立連線，
+不可以直接在Main Thread建立連線。
